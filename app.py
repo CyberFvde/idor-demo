@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 # Simulated user "database"
 users = {
-    1: {"name": "Alice", "email": "alice@example.com"},
-    2: {"name": "Bob", "email": "bob@example.com"}
+    1: {"name": "Gavin", "email": "gavin@example.com"},
+    2: {"name": "Sam", "email": "sam@example.com"}
 }
 
 # Vulnerable endpoint: It takes a user_id from the URL without checking ownership.
