@@ -8,7 +8,11 @@ users = {
     2: {"name": "Sam", "email": "sam@example.com"}
 }
 
-# Vulnerable endpoint: It takes a user_id from the URL without checking ownership.
+# Added home route
+@app.route('/')
+def home():
+    return render_template('index.html', users=users)
+
 @app.route('/profile/<int:user_id>')
 def profile(user_id):
     user = users.get(user_id)
